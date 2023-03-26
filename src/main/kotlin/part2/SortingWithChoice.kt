@@ -1,26 +1,32 @@
 package part2
 
 class SortingWithChoice {
-    fun findSmallest(arr: List<Int>): Int {
+    private fun findSmallest(arr: List<Int>): Int {
         var smallest = arr[0]
-        var smallestIndex = 0
         for (i in (1 until arr.size)) {
             if (arr[i] < smallest) {
                 smallest = arr[i]
-                smallestIndex = i
             }
         }
-        return smallestIndex
+        return smallest
     }
 
     fun selectionSort(arr: List<Int>): List<Int> {
-        var myList = mutableListOf<Int>()
-//        for (i )
-        return myList
+        val myList = mutableListOf<Int>()
+        for (item in arr) {
+            myList.add(item)
+        }
+        val newList = mutableListOf<Int>()
+        for (item in 0 until myList.size) {
+            val smallest = findSmallest(myList)
+            newList.add(smallest)
+            myList.remove(smallest)
+        }
+        return newList
     }
 
     companion object {
-        val myList = listOf(5, 3, 2, 6, 10)
+        val myList = listOf(-5, 3, 20, 6, -10)
     }
 }
 
