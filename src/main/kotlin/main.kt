@@ -1,6 +1,7 @@
 import part1.BinarySearch
 import part2.SortingWithChoice
-import part3.Factorial
+import part3.Recursion
+import part4.Sum
 
 fun main() {
 
@@ -12,6 +13,13 @@ fun main() {
 
     // part3
     val number = 5
-    println("Factorial $number = ${Factorial().fact(number)}")
+    println("Factorial $number = ${Recursion().fact(number)}")
+    println("Fibonacci ${number + number} = ${Recursion().fibonacci(number + number)}")
+
+    // part4
+    // sum
+    println(Sum().sumLooper(Sum.list))
+    println(Sum().sumRecursion(Sum.list))
+
 }
 
