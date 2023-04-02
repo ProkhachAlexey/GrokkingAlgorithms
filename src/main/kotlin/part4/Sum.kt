@@ -16,10 +16,11 @@ class Sum {
         return if (list.isEmpty())
             0
         else
-            list.lastIndexOf(list.size - 1) + sumRecursion(list.dropLast(1))
+            list.last() + sumRecursion(list.dropLast(1))
     }
 
     companion object {
+
         val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
     }
 }

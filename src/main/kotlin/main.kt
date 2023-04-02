@@ -1,6 +1,7 @@
 import part1.BinarySearch
 import part2.SortingWithChoice
 import part3.Recursion
+import part4.QuickSort
 import part4.Sum
 
 fun main() {
@@ -21,5 +22,7 @@ fun main() {
     println(Sum().sumLooper(Sum.list))
     println(Sum().sumRecursion(Sum.list))
 
+    // quick sort
+    println(QuickSort().quickSort(QuickSort.testList))
 }
 
